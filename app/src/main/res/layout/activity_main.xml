@@ -40,7 +40,8 @@
                         android:layout_column="0"/>
                 <EditText
                         android:padding="@dimen/medium_margin"
-                        android:layout_width="wrap_content"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_width="1dp"
                         android:layout_height="wrap_content"
                         android:hint="http://localhost:8123"
                         android:paddingLeft="@dimen/small_margin"
@@ -57,7 +58,8 @@
                 <EditText
                         android:padding="@dimen/medium_margin"
                         android:paddingLeft="@dimen/small_margin"
-                        android:layout_width="wrap_content"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_width="1dp"
                         android:layout_height="wrap_content"
                         android:hint="https://www.mydomain.org"
                         android:inputType="textUri"
@@ -72,7 +74,8 @@
                         android:layout_column="0"/>
                 <EditText
                         android:padding="@dimen/medium_margin"
-                        android:layout_width="wrap_content"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_width="1dp"
                         android:layout_height="wrap_content"
                         android:hint="password"
                         android:id="@+id/homeAssistantTokenValue"
@@ -89,12 +92,57 @@
                 <EditText
                         android:padding="@dimen/medium_margin"
                         android:paddingLeft="@dimen/small_margin"
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_width="1dp"
                         android:hint="input_datetime.alarm_time_picker"
                         android:id="@+id/homeAssistantEntityValue"
                         android:layout_row="4" android:layout_column="1" android:inputType="text"
                         android:textSize="@dimen/small_text"/>
+                <TextView
+                        android:padding="@dimen/medium_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alarm offset"
+                        android:id="@+id/timeOffsetLabel" android:layout_row="5"
+                        android:layout_column="0"/>
+                <LinearLayout
+                        android:layout_gravity="fill"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_row="5"
+                            android:layout_column="1"
+                            android:id="@+id/timeOffsetBar" android:max="120" android:min="0" android:progress="60"/>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <TextView
+                                android:text="-60min"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/timeOffsetMinLabel"
+                                android:layout_weight="1" tools:textSize="12sp"/>
+                        <TextView
+                                android:text="0min"
+                                android:gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/timeOffsetChosenLabel"
+                                android:layout_weight="1"/>
+                        <TextView
+                                android:text="+60min"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:id="@+id/timeOffsetMaxLabel"
+                                android:layout_weight="1" android:textSize="12sp"/>
+                    </LinearLayout>
+                </LinearLayout>
                 <TextView
                         android:text="The alarm time will be sent automatically on phone boot and on alarm change, or manually by clicking the button."
                         android:layout_width="wrap_content"
@@ -102,7 +150,8 @@
                         android:layout_columnSpan="2"
                         android:padding="@dimen/medium_margin"
                         android:id="@+id/helpText"
-                        android:layout_row="5" android:layout_column="0"/>
+                        android:layout_row="6"
+                        android:layout_column="0"/>
             </GridLayout>
             <Button
                     android:text="Save and send"

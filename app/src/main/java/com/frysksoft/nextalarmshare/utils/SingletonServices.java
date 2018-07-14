@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import com.frysksoft.nextalarmshare.services.NextAlarmService;
 
 import static android.content.Context.MODE_PRIVATE;

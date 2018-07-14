@@ -9,3 +9,4 @@
 .externalNativeBuild
 *.pro
 .idea/
+*.apk
